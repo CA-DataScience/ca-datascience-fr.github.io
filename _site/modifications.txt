@@ -1,5 +1,96 @@
-Remove the start, getting started, templates, header styles, documentation tabs from the navigation bar. And remove all of their routes and drop down menus as well. 
+The arrow is injected by the theme only when the `<li>` carries the class `has-dropdown`.
+Kill that class → arrow disappears. You can do it three ways; all live entirely inside *your* repo, no fork.
 
-Remove the search and contact buttons as well from the right bit of the nav bar. 
+---
 
-For the blog button - remove the drop down menu - pressing the button should redirect to /blog or whatever the relevant URL is. no blog archive thingy. e
+## 1  Provide your own `_data/navigation.yml` (preferred)
+
+`site.data.navigation` is where the include gets its menu items.
+If you don’t have the file yet, create it:
+
+```
+mkdir -p _data
+```
+
+```yaml
+# _data/navigation.yml
+- title: "Home"
+  url:   "/"
+  side:  "left"
+
+- title: "Blog"        # <— no dropdown key at all
+  url:   "/blog/"
+  side:  "left"
+
+- title: "Students"
+  url:   "/students/"
+  side:  "left"
+
+- title: "Educators"
+  url:   "/educators/"
+  side:  "left"
+
+- title: "FAQs"
+  url:   "/faqs/"
+  side:  "left"
+```
+
+Because the **Blog** entry has **no `dropdown:` key**, Jekyll’s loop never adds `has-dropdown`, so the CSS arrow isn’t rendered.
+
+Commit → `bundle exec jekyll serve` → arrow gone.
+
+---
+
+## 2  Tiny override of the include (if you really don’t want YAML)
+
+1. Copy the file you showed into your repo:
+
+```
+mkdir -p _includes
+cp path/to/theme/_includes/navigation.html _includes/
+```
+
+2. In your copy find the two places that decide `has-dropdown`
+   (once in the **left** loop, once in the **right** loop):
+
+```liquid
+<li class="has-dropdown{% if link.url == page.url %} active{% endif %}">
+```
+
+3. Change each to:
+
+```liquid
+{% unless link.dropdown == nil or link.dropdown == empty %}
+<li class="has-dropdown{% if link.url == page.url %} active{% endif %}">
+{% else %}
+<li{% if link.url == page.url %} class="active"{% endif %}>
+{% endunless %}
+```
+
+Only entries that *really* have dropdown items keep the class.
+
+---
+
+## 3  CSS sniper shot (last resort)
+
+Add this to `assets/css/style.scss` (or whatever custom SCSS you’re already loading):
+
+```scss
+/* Hide the dropdown arrow that Foundation adds to the Blog menu item */
+.top-bar-section li a[href="/blog/"]:after {
+  display: none;
+}
+```
+
+No markup changes, but keep in mind you must update the selector if the URL changes.
+
+---
+
+### Which method to use?
+
+* **Method 1** = cleanest. You’ll want a navigation.yml anyway as you prune items.
+* **Method 2** if you need logic tweaks elsewhere in the menu.
+* **Method 3** only when you can’t edit Liquid for some reason.
+
+All three approaches remain compatible with the `remote_theme:` workflow—still no fork.
+

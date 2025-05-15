@@ -1,0 +1,20 @@
+# Custom navigation without dropdown arrows
+- title: "Home"
+  url:   "/"
+  side:  "left"
+
+- title: "For Students"
+  url:   "/students/"
+  side:  "left"
+
+- title: "For Educators"
+  url:   "/educators/"
+  side:  "left"
+
+- title: "Blog"      # No dropdown key means no dropdown arrow
+  url:   "/blog/"
+  side:  "left"
+
+- title: "FAQs"
+  url:   "/faqs/"
+  side:  "left"

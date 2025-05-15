@@ -147,13 +147,9 @@
           
             
             
-              <li class="has-dropdown">
-                <a href="http://localhost:4000/ca-datascience-fr.github.io/blog/">Blog</a>
-                <ul class="dropdown">
-                  
-                </ul>
-              </li>
+              <li><a href="http://localhost:4000/ca-datascience-fr.github.io/blog/">Blog</a></li>
               <li class="divider"></li>
+            
             
           
         

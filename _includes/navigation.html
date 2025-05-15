@@ -1,38 +1,55 @@
 {% comment %}
-  Custom navigation that only shows the items defined in _config.yml navigation array
-  - Removes start, getting started, templates, header styles, documentation tabs
-  - Removes search and contact buttons from the right side
-  - Blog button has no dropdown menu
+    This is a complete navigation template that replaces the dropdown arrow for the Blog button
 {% endcomment %}
 
 <div id="navigation" class="sticky">
   <nav class="top-bar" role="navigation" data-topbar>
     <ul class="title-area">
       <li class="name">
-        <h1 class="show-for-small-only"><a href="{{ site.url }}{{ site.baseurl }}" class="icon-tree"> {{ site.title }}</a></h1>
+        <h1 class="show-for-large-up"><a href="{{ site.url }}{{ site.baseurl }}" class="icon-tree"> {{ site.title }}</a></h1>
       </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Nav</span></a></li>
     </ul>
     <section class="top-bar-section">
       <ul class="left">
         {% for link in site.navigation %}
+
           {% if link.url contains 'http' %}
             {% assign domain = '' %}
           {% else %}
             {% assign domain = site.url | append: site.baseurl %}
           {% endif %}
-          
-          {% if link.url == page.url %}
-            {% assign active = ' active' %}
-          {% else %}
-            {% assign active = '' %}
-          {% endif %}
 
-          <li class="{{ active }}">
-            <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-          </li>
+          {% comment %}   If there is a submenu, show an arrow   {% endcomment %}
+          {% if link.title == 'Blog' %}
+            {% comment %}   Blog link without dropdown   {% endcomment %}
+            {% if link.url == page.url %}
+              {% assign active = ' active' %}
+            {% else %}
+              {% assign active = '' %}
+            {% endif %}
+            <li class="{{ active }}">
+              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% else %}
+            {% if link.url == page.url %}
+              {% assign active = ' active' %}
+            {% else %}
+              {% assign active = '' %}
+            {% endif %}
+            <li class="{{ active }}">
+              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endif %}
+          
+          <li class="divider"></li>
         {% endfor %}
+      </ul>
+      
+      {% comment %}   Remove the right menu items   {% endcomment %}
+      <ul class="right">
       </ul>
     </section>
   </nav>
-</div>
+</div><!-- /#navigation -->

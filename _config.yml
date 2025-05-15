@@ -11,6 +11,10 @@ logo: "/assets/img/logo.png" # Optional logo
 remote_theme: Phlow/feeling-responsive
 permalink: /:categories/:title/
 
+# Custom stylesheets
+header_css: 
+  - /assets/css/style_overrides.css
+
 # Collections
 collections:
   resources:
@@ -34,7 +38,6 @@ navigation:
   - title: "Blog"
     url: "/blog/"
     side: left
-    dropdown: false
   - title: "FAQs"
     url: "/faqs/"
     side: left
