@@ -3,7 +3,7 @@ title: "Data Science Education Portal"
 description: "Educational resources for data science students and educators"
 email: "vivrd@berkeley.edu"
 baseurl: ""
-url: "https://ca-datascience.github.io"
+url: "https://ca-datascience-fr.github.io"
 logo: "/assets/img/logo.png" # Optional logo
 
 # Theme Settings
