@@ -1,0 +1,4 @@
+/* Custom CSS to hide the dropdown arrow on the Blog menu item */
+.top-bar-section li.has-dropdown > a[href*="/blog/"]::after {
+  display: none !important;
+}
