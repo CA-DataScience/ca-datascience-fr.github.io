@@ -18,6 +18,9 @@ collections:
     permalink: /:collection/:path/
 
 # Navigation
+# Theme default items removed: Start, Getting Started, Templates, Header Styles, Documentation
+# Also removed: Search and Contact from right side
+# Blog dropdown menu removed
 navigation:
   - title: Home
     url: "/"
@@ -31,6 +34,7 @@ navigation:
   - title: "Blog"
     url: "/blog/"
     side: left
+    dropdown: false
   - title: "FAQs"
     url: "/faqs/"
     side: left

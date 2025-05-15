@@ -1,0 +1,5 @@
+Remove the start, getting started, templates, header styles, documentation tabs from the navigation bar. And remove all of their routes and drop down menus as well. 
+
+Remove the search and contact buttons as well from the right bit of the nav bar. 
+
+For the blog button - remove the drop down menu - pressing the button should redirect to /blog or whatever the relevant URL is. no blog archive thingy. e

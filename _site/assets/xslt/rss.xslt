@@ -10,11 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>RSS Feed (Styled)</title>
 
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/styles_feeling_responsive.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/ca-datascience-fr.github.io/assets/css/styles_feeling_responsive.css">
 
   
 
-	<script src="http://localhost:4000/assets/js/modernizr.min.js"></script>
+	<script src="http://localhost:4000/ca-datascience-fr.github.io/assets/js/modernizr.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 	<script>
@@ -37,13 +37,13 @@
 	
 	
 	
-	<link rel="canonical" href="http://localhost:4000/assets/xslt/rss.xslt">
+	<link rel="canonical" href="http://localhost:4000/ca-datascience-fr.github.io/assets/xslt/rss.xslt">
 
 
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="RSS Feed (Styled)">
 	<meta property="og:description" content="Educational resources for data science students and educators">
-	<meta property="og:url" content="http://localhost:4000/assets/xslt/rss.xslt">
+	<meta property="og:url" content="http://localhost:4000/ca-datascience-fr.github.io/assets/xslt/rss.xslt">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Data Science Education Portal">
@@ -53,7 +53,7 @@
 
 	
 
-	<link type="text/plain" rel="author" href="http://localhost:4000/humans.txt">
+	<link type="text/plain" rel="author" href="http://localhost:4000/ca-datascience-fr.github.io/humans.txt">
 
 	
 
@@ -93,347 +93,122 @@
 	</head>
 	<body id="top-of-page">
 		<xsl:text disable-output-escaping="yes"><![CDATA[
-		
-<div id="navigation" class="sticky">
+		<div id="navigation" class="sticky">
   <nav class="top-bar" role="navigation" data-topbar data-options="scrolltop: false">
     <ul class="title-area">
       <li class="name">
-      <h1 class="hide-for-large-up"><a href="http://localhost:4000" class="icon-tree"> Data Science Education Portal</a></h1>
-    </li>
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <h1 class="hide-for-large-up"><a href="http://localhost:4000/ca-datascience-fr.github.io" class="icon-tree"> Data Science Education Portal</a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar toggle-topbar-click menu-icon"><a><span>Nav</span></a></li>
     </ul>
     <section class="top-bar-section">
-
       <ul class="left">
         
-
-              
-
           
           
-
+          
+          
             
             
-              <li><a  href="http://localhost:4000/">Start</a></li>
+              <li><a href="http://localhost:4000/ca-datascience-fr.github.io/">Home</a></li>
               <li class="divider"></li>
-
             
             
           
         
-
-              
-
           
           
-
+          
+          
             
             
-              <li><a  href="http://localhost:4000/getting-started/">Getting Started</a></li>
+              <li><a href="http://localhost:4000/ca-datascience-fr.github.io/students/">For Students</a></li>
               <li class="divider"></li>
-
             
             
           
         
-
-              
-
           
           
-
+          
+          
             
             
-
+              <li><a href="http://localhost:4000/ca-datascience-fr.github.io/educators/">For Educators</a></li>
+              <li class="divider"></li>
+            
+            
+          
+        
+          
+          
+          
+          
+            
+            
               <li class="has-dropdown">
-                <a  href="http://localhost:4000/design/">Templates</a>
-
-                  <ul class="dropdown">
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/grid/">Grid &amp; Colors</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/typography/typography/">Typography</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/page/">Page/Post</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/post-left-sidebar/">Post-Left-Sidebar</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/post-right-sidebar/">Post-Right-Sidebar</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/page-fullwidth/">Page Full-Width</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/blog/">Blog-Page</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/video/">Video</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/gallery/">Gallery</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/portfolio/">Portfolio</a></li>
-                    
-                  </ul>
-
+                <a href="http://localhost:4000/ca-datascience-fr.github.io/blog/">Blog</a>
+                <ul class="dropdown">
+                  
+                </ul>
               </li>
               <li class="divider"></li>
             
           
         
-
-              
-
           
           
-
+          
+          
             
             
-
-              <li class="has-dropdown">
-                <a  href="http://localhost:4000/headers/">Header Styles</a>
-
-                  <ul class="dropdown">
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/header-full-width-image/">Header with Full-Width-Image</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/header-image-pattern/">Header with Image and Pattern</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/header-image-color/">Header with image and color</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/header-logo-only/">Header Only With Logo</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/header-with-text/">Header With Text</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/no-header/">No Header</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/design/no-header-but-image/">No Header but Image</a></li>
-                    
-                  </ul>
-
-              </li>
+              <li><a href="http://localhost:4000/ca-datascience-fr.github.io/faqs/">FAQs</a></li>
               <li class="divider"></li>
             
-          
-        
-
-              
-
-          
-          
-
-            
-            
-
-              <li class="has-dropdown">
-                <a  href="http://localhost:4000/documentation/">Documentation</a>
-
-                  <ul class="dropdown">
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/changelog/">Changelog</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/roadmap/">Roadmap</a></li>
-                    
-                  </ul>
-
-              </li>
-              <li class="divider"></li>
             
           
-        
-
-              
-
-          
-          
-
-            
-            
-
-              <li class="has-dropdown">
-                <a  href="http://localhost:4000/blog/">Blog</a>
-
-                  <ul class="dropdown">
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/blog/archive/">Blog Archive</a></li>
-                    
-                  </ul>
-
-              </li>
-              <li class="divider"></li>
-            
-          
-        
-
-              
-
-          
-          
-        
-
-              
-
-          
-          
-        
         
       </ul>
       
-      
-
       <ul class="right">
         
-
-              
-
-
-
+          
+          
           
           
         
-
-              
-
-
-
+          
+          
           
           
         
-
-              
-
-
-
+          
+          
           
           
         
-
-              
-
-
-
+          
+          
           
           
         
-
-              
-
-
-
           
           
-        
-
-              
-
-
-
           
           
-        
-
-              
-
-
-
-          
-          
-            
-            
-              <li class="divider"></li>
-              <li><a  href="http://localhost:4000/search/">Search</a></li>
-
-            
-            
-          
-        
-
-              
-
-
-
-          
-          
-            
-            
-              <li class="divider"></li>
-              <li><a  href="http://localhost:4000/contact/">Contact</a></li>
-
-            
-            
-          
-        
         
       </ul>
-     
     </section>
   </nav>
 </div><!-- /#navigation -->
-
 		
 
 <div id="masthead-no-image-header">
 	<div class="row">
 		<div class="small-12 columns">
-			<a id="logo" href="http://localhost:4000/" title="Data Science Education Portal – ">
-				<img src="http://localhost:4000/assets/img//assets/img/logo.png" alt="Data Science Education Portal – ">
+			<a id="logo" href="http://localhost:4000/ca-datascience-fr.github.io/" title="Data Science Education Portal – ">
+				<img src="http://localhost:4000/ca-datascience-fr.github.io/assets/img//assets/img/logo.png" alt="Data Science Education Portal – ">
 			</a>
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
@@ -511,7 +286,7 @@
 
             <p class="shadow-black">
               Educational resources for data science students and educators
-              <a href="http://localhost:4000/info/">More ›</a>
+              <a href="http://localhost:4000/ca-datascience-fr.github.io/info/">More ›</a>
             </p>
           </div><!-- /.large-6.columns -->
 
@@ -535,27 +310,27 @@
               
                 
                   <li >
-                    <a href="http://localhost:4000"  title=""></a>
+                    <a href="http://localhost:4000/ca-datascience-fr.github.io"  title=""></a>
                   </li>
               
                 
                   <li >
-                    <a href="http://localhost:4000/contact/"  title="Contact">Contact</a>
+                    <a href="http://localhost:4000/ca-datascience-fr.github.io/contact/"  title="Contact">Contact</a>
                   </li>
               
                 
                   <li >
-                    <a href="http://localhost:4000/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                    <a href="http://localhost:4000/ca-datascience-fr.github.io/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
                   </li>
               
                 
                   <li >
-                    <a href="http://localhost:4000/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                    <a href="http://localhost:4000/ca-datascience-fr.github.io/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
                   </li>
               
                 
                   <li >
-                    <a href="http://localhost:4000/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                    <a href="http://localhost:4000/ca-datascience-fr.github.io/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
                   </li>
               
               </ul>
@@ -581,7 +356,7 @@
             
               
                 <li >
-                  <a href="http://localhost:4000"  title=""></a>
+                  <a href="http://localhost:4000/ca-datascience-fr.github.io"  title=""></a>
                 </li>
             
               
@@ -637,7 +412,7 @@
 		
 
 
-<script src="http://localhost:4000/assets/js/javascript.min.js"></script>
+<script src="http://localhost:4000/ca-datascience-fr.github.io/assets/js/javascript.min.js"></script>
 
 
 
