@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/events/workshop/inspire-workshop-recap/</loc>
+<lastmod>2023-10-20T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/tutorials/basics/data-science-fundamentals/</loc>
+<lastmod>2025-04-24T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/machine-learning/ai/machine-learning-intro/</loc>
+<lastmod>2025-04-25T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/educators/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/faqs/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/students/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/assets/fonts/iconfont-preview.html</loc>
+<lastmod>2025-05-14T21:50:25-07:00</lastmod>
+</url>
+</urlset>

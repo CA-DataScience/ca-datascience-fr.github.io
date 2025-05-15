@@ -1,0 +1,65 @@
+# Site Settings
+title: "Data Science Education Portal"
+description: "Educational resources for data science students and educators"
+email: "vivrd@berkeley.edu"
+baseurl: ""
+url: "https://ca-datascience.github.io"
+logo: "/assets/img/logo.png" # Optional logo
+
+# Theme Settings
+remote_theme: Phlow/feeling-responsive
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  resources:
+    output: true
+    permalink: /:collection/:path/
+
+# Navigation
+navigation:
+  - title: Home
+    url: "/"
+    side: left
+  - title: "For Students"
+    url: "/students/"
+    side: left
+  - title: "For Educators"
+    url: "/educators/"
+    side: left
+  - title: "Blog"
+    url: "/blog/"
+    side: left
+  - title: "FAQs"
+    url: "/faqs/"
+    side: left
+
+# Blog Settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Social Media
+social:
+  github: "ca-datascience"
+  twitter: "ca_datascience"
+
+# Default Front Matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      show_meta: true
+      
+# Plugin Settings
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-remote-theme

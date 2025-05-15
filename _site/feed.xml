@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-14T21:50:25-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science Education Portal</title><subtitle>Educational resources for data science students and educators</subtitle><entry><title type="html">Introduction to Machine Learning</title><link href="http://localhost:4000/machine-learning/ai/machine-learning-intro/" rel="alternate" type="text/html" title="Introduction to Machine Learning" /><published>2025-04-25T00:00:00-07:00</published><updated>2025-04-25T00:00:00-07:00</updated><id>http://localhost:4000/machine-learning/ai/machine-learning-intro</id><content type="html" xml:base="http://localhost:4000/machine-learning/ai/machine-learning-intro/"><![CDATA[<p>Machine Learning (ML) is a subset of artificial intelligence that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. This post introduces key concepts in machine learning.</p>
+
+<h2 id="types-of-machine-learning">Types of Machine Learning</h2>
+
+<h3 id="supervised-learning">Supervised Learning</h3>
+
+<p>In supervised learning, algorithms learn from labeled training data, and make predictions based on that data. Examples include:</p>
+
+<ul>
+  <li><strong>Classification</strong>: Identifying which category an object belongs to</li>
+  <li><strong>Regression</strong>: Predicting a continuous value</li>
+</ul>
+
+<div class="flex-video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/example-supervised-learning" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="unsupervised-learning">Unsupervised Learning</h3>
+
+<p>Unsupervised learning algorithms find patterns in data without labels. Common techniques include:</p>
+
+<ul>
+  <li><strong>Clustering</strong>: Grouping similar data points</li>
+  <li><strong>Dimensionality reduction</strong>: Reducing the number of variables</li>
+  <li><strong>Association</strong>: Discovering rules that describe relationships</li>
+</ul>
+
+<h3 id="reinforcement-learning">Reinforcement Learning</h3>
+
+<p>Reinforcement learning is about taking actions to maximize rewards in a particular environment. It’s used in:</p>
+
+<ul>
+  <li>Game playing</li>
+  <li>Robotics</li>
+  <li>Autonomous vehicles</li>
+</ul>
+
+<h2 id="popular-algorithms">Popular Algorithms</h2>
+
+<p>Some widely-used machine learning algorithms include:</p>
+
+<ol>
+  <li>Linear Regression</li>
+  <li>Logistic Regression</li>
+  <li>Decision Trees</li>
+  <li>Random Forests</li>
+  <li>Support Vector Machines</li>
+  <li>K-Means Clustering</li>
+  <li>Neural Networks</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="n">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="n">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+<span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># Generate a sample dataset
+</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Split into training and test sets
+</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="nf">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Train a random forest classifier
+</span><span class="n">model</span> <span class="o">=</span> <span class="nc">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Make predictions
+</span><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluate accuracy
+</span><span class="n">accuracy</span> <span class="o">=</span> <span class="nf">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Model accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span></code></pre></figure>
+
+<h2 id="challenges-in-machine-learning">Challenges in Machine Learning</h2>
+
+<p>While powerful, machine learning faces several challenges:</p>
+
+<ul>
+  <li><strong>Overfitting and underfitting</strong>: Balancing model complexity</li>
+  <li><strong>Data quality and quantity</strong>: Ensuring sufficient clean data</li>
+  <li><strong>Feature selection</strong>: Choosing the most relevant variables</li>
+  <li><strong>Interpretability vs. accuracy</strong>: Understanding model decisions</li>
+  <li><strong>Ethical considerations</strong>: Addressing bias and fairness</li>
+</ul>
+
+<p>Machine learning continues to evolve rapidly, with new techniques and applications emerging regularly. Join us in future posts as we explore specific algorithms and their implementations in greater detail.</p>]]></content><author><name></name></author><category term="machine-learning" /><category term="ai" /><category term="algorithms" /><category term="supervised-learning" /><category term="unsupervised-learning" /><summary type="html"><![CDATA[Machine Learning (ML) is a subset of artificial intelligence that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. This post introduces key concepts in machine learning.]]></summary></entry><entry><title type="html">Data Science Fundamentals</title><link href="http://localhost:4000/tutorials/basics/data-science-fundamentals/" rel="alternate" type="text/html" title="Data Science Fundamentals" /><published>2025-04-24T00:00:00-07:00</published><updated>2025-04-24T00:00:00-07:00</updated><id>http://localhost:4000/tutorials/basics/data-science-fundamentals</id><content type="html" xml:base="http://localhost:4000/tutorials/basics/data-science-fundamentals/"><![CDATA[<p>Data Science combines multiple fields, including statistics, scientific methods, and data analysis, to extract value from data. This post explores the core components that make up the foundation of data science.</p>
+
+<h2 id="core-components">Core Components</h2>
+
+<h3 id="statistics-and-mathematics">Statistics and Mathematics</h3>
+
+<p>Statistics is the backbone of data science. It provides the tools to collect, analyze, interpret, present, and organize data. Key statistical concepts include:</p>
+
+<ul>
+  <li>Descriptive statistics</li>
+  <li>Inferential statistics</li>
+  <li>Probability distributions</li>
+  <li>Hypothesis testing</li>
+</ul>
+
+<h3 id="programming">Programming</h3>
+
+<p>Python and R are the most popular programming languages in data science. They offer libraries specifically designed for data manipulation and analysis:</p>
+
+<ul>
+  <li>Python: Pandas, NumPy, Matplotlib</li>
+  <li>R: dplyr, ggplot2, tidyr</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># Sample code for data analysis
+</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">({</span>
+    <span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="sh">'</span><span class="s">y</span><span class="sh">'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">df</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">'</span><span class="s">Sample Scatter Plot</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">X Variable</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Y Variable</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span></code></pre></figure>
+
+<h3 id="domain-knowledge">Domain Knowledge</h3>
+
+<p>Understanding the business or scientific domain is crucial for asking the right questions and properly interpreting results. Domain knowledge helps in:</p>
+
+<ul>
+  <li>Formulating relevant hypotheses</li>
+  <li>Selecting appropriate variables</li>
+  <li>Interpreting results in context</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>If you’re new to data science, start with these resources:</p>
+
+<ol>
+  <li>Learn Python basics</li>
+  <li>Study fundamental statistics</li>
+  <li>Practice with real datasets</li>
+  <li>Build small projects</li>
+</ol>
+
+<p>The journey into data science is rewarding but requires continuous learning and practice. Stay tuned for more tutorials on specific tools and techniques!</p>]]></content><author><name></name></author><category term="tutorials" /><category term="basics" /><category term="statistics" /><category term="programming" /><category term="basics" /><summary type="html"><![CDATA[Data Science combines multiple fields, including statistics, scientific methods, and data analysis, to extract value from data. This post explores the core components that make up the foundation of data science.]]></summary></entry><entry><title type="html">INSPIRE 2024 Workshop Recap: Building Data Science Pathways Together</title><link href="http://localhost:4000/events/workshop/inspire-workshop-recap/" rel="alternate" type="text/html" title="INSPIRE 2024 Workshop Recap: Building Data Science Pathways Together" /><published>2023-10-20T00:00:00-07:00</published><updated>2023-10-20T00:00:00-07:00</updated><id>http://localhost:4000/events/workshop/inspire-workshop-recap</id><content type="html" xml:base="http://localhost:4000/events/workshop/inspire-workshop-recap/"><![CDATA[<p>On October 16, 2024, the INSPIRE Conference brought together grantees from the California Learning Lab’s Data Science Grand Challenge for an energizing afternoon of connection, collaboration, and shared learning. Designed as an interactive experience, the workshops gave attendees a chance to reflect on the progress of their projects, co-create curriculum ideas, and engage in rich cross-institutional dialogue around building equitable, effective data science pathways.</p>
+
+<h2 id="keynote-highlights">Keynote Highlights</h2>
+
+<p>The event began with a keynote by Ray Levy who serves as the Executive Director for Data Science and AI Academy at North Carolina State University. She kicked off the session by inviting participants to reflect on the evolving landscape of data science education. In an interactive activity, attendees contributed to shaping Data Science Higher Education Knowledge Areas, responding to the following thought-provoking questions:</p>
+
+<ul>
+  <li>Why do we teach these topics in data science (or not)?</li>
+  <li>Are they really core and common across the foundational disciplines as we create this new interdisciplinary discipline?</li>
+  <li>Do you think of these topics as ones that all data science students should take, topics that students might see in a concentration, or topics that would likely be electives?</li>
+</ul>
+
+<p>Ray’s facilitation provided a national perspective on efforts to standardize data science education and invited feedback on how institutions across California are interpreting and implementing foundational content in diverse ways.</p>
+
+<h2 id="workshop-sessions">Workshop Sessions</h2>
+
+<h3 id="session-1-intro-to-data-science--course-outlines-and-common-ground">Session 1: Intro to Data Science – Course Outlines and Common Ground</h3>
+
+<p>This session kicked off with a discussion on what’s currently being taught in introductory data science courses across community colleges, CSUs, and UCs. Participants broke into institutional segments and engaged in conversations about:</p>
+
+<ul>
+  <li>What topics are commonly covered</li>
+  <li>Prerequisites and post-class pathways</li>
+  <li>What should be “front loaded” in an intro DS course</li>
+</ul>
+
+<blockquote>
+  <p>“I thought the collaborative project where we designed a data science course was most valuable. It was informative to see how people think about presentation of the subject and what is important to front load or include.”</p>
+</blockquote>
+
+<p>This session helped highlight both shared foundations and the variety of approaches taken across institutions—sparking ideas for better alignment and innovation.</p>
+
+<h3 id="session-2-metrics-and-evaluation--harmonizing-impact">Session 2: Metrics and Evaluation – Harmonizing Impact</h3>
+
+<p>In this session, participants shifted focus to evaluation, breaking into themed groups to discuss outcomes through the lenses of:</p>
+
+<ul>
+  <li>Students</li>
+  <li>Instruction</li>
+  <li>Institutions</li>
+</ul>
+
+<p>Using an Alignment Spreadsheet, groups worked to surface common indicators and challenges across projects. This session emphasized the need for shared language and metrics to tell a collective story about the impact of data science education efforts.</p>
+
+<h3 id="session-3-showcase-materials--sharing-what-works">Session 3: Showcase Materials – Sharing What Works</h3>
+
+<p>The final workshop was a “show and tell” of instructional materials submitted by projects throughout the year. This open session created space to celebrate creativity, excellence, and collaboration among grantees. Attendees discussed:</p>
+
+<ul>
+  <li>What makes a teaching asset stand out</li>
+  <li>Materials they’re excited to adapt or adopt</li>
+  <li>What else they want to see shared in the future</li>
+</ul>
+
+<h2 id="reflections--next-steps">Reflections &amp; Next Steps</h2>
+
+<p>One of the most powerful takeaways from the day was the sense of community and collaboration in the room. Whether discussing evaluation frameworks or exchanging ideas on what makes a great intro course, participants valued the opportunity to learn from peers across disciplines and institutions.</p>
+
+<blockquote>
+  <p>“Being in a room with representatives from so many different institutions, learning about project updates, different disciplines’ interpretation etc. was truly energizing.”</p>
+</blockquote>
+
+<p>The energy and insight shared at INSPIRE reaffirmed Learning Lab’s commitment to growing data science pathways together by fostering an inclusive, impactful, and deeply collaborative environment.</p>]]></content><author><name></name></author><category term="events" /><category term="workshop" /><category term="data-science" /><category term="education" /><category term="collaboration" /><summary type="html"><![CDATA[On October 16, 2024, the INSPIRE Conference brought together grantees from the California Learning Lab’s Data Science Grand Challenge for an energizing afternoon of connection, collaboration, and shared learning. Designed as an interactive experience, the workshops gave attendees a chance to reflect on the progress of their projects, co-create curriculum ideas, and engage in rich cross-institutional dialogue around building equitable, effective data science pathways.]]></summary></entry></feed>
